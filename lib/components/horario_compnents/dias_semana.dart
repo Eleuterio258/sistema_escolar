@@ -5,20 +5,20 @@ diasSemana({dia, ano}) {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Icon(Icons.timer),
+        const Icon(Icons.timer),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               dia,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 17,
               ),
             ),
             Text(
               ano,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 17,
               ),
             ),

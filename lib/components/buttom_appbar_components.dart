@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ButtomAppBarComponents extends StatelessWidget {
-  const ButtomAppBarComponents({Key key}) : super(key: key);
+  const ButtomAppBarComponents({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
       child: Container(
         height: 72,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(24),
             topRight: Radius.circular(24),
@@ -21,7 +21,7 @@ class ButtomAppBarComponents extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.home, color: Colors.deepPurpleAccent),
                 Text("Principal", style: TextStyle(fontSize: 12)),
               ],
@@ -29,7 +29,7 @@ class ButtomAppBarComponents extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.bookmark, color: Colors.deepPurpleAccent),
                 Text("Evento", style: TextStyle(fontSize: 12)),
               ],
@@ -37,7 +37,7 @@ class ButtomAppBarComponents extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.timer, color: Colors.deepPurpleAccent),
                 Text("Cadeiras", style: TextStyle(fontSize: 12))
               ],
@@ -45,7 +45,7 @@ class ButtomAppBarComponents extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.notification_important,
                     color: Colors.deepPurpleAccent),
                 Text(
@@ -57,7 +57,7 @@ class ButtomAppBarComponents extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Icon(Icons.person, color: Colors.deepPurpleAccent),
                 Text("Perfil", style: TextStyle(fontSize: 12)),
               ],

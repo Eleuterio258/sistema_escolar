@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/foundation.dart';
 import 'package:sistema_escolar/shared/model/pagamento_model.dart';
 
 class PagamentoState extends Equatable {
@@ -21,7 +20,7 @@ class PagamentoLoadedStste extends PagamentoState {
 
   final List<Pagamento> pagamentos;
 
-  PagamentoLoadedStste({@required this.pagamentos});
+  PagamentoLoadedStste({required this.pagamentos});
   @override
   List<Object> get props => [];
 }
@@ -29,7 +28,7 @@ class PagamentoLoadedStste extends PagamentoState {
 class PagamentoErrorState extends PagamentoState {
   final String message;
 
-  PagamentoErrorState({this.message});
+  PagamentoErrorState({required this.message});
   @override
   List<Object> get props => [];
 }

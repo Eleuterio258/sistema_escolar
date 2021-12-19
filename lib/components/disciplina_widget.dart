@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 disciplinaWidget(context) {
   return Padding(
     padding: const EdgeInsets.all(5.0),
-    child: Container(
+    child: SizedBox(
       height: MediaQuery.of(context).size.height * 0.2,
       child: Card(
         child: Column(
@@ -13,7 +13,7 @@ disciplinaWidget(context) {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: const [
                 SizedBox(width: 2),
                 Text(
                   "MATEMÁTICA II -",
@@ -30,36 +30,36 @@ disciplinaWidget(context) {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(width: 2),
-                Text("TURMA: A"),
-                SizedBox(width: 15),
-                Text("PFA"),
-                SizedBox(width: 15),
-                Text("CODIGO:MAT II"),
-                SizedBox(width: 15),
+              const   SizedBox(width: 2),
+              const   Text("TURMA: A"),
+              const   SizedBox(width: 15),
+              const   Text("PFA"),
+              const   SizedBox(width: 15),
+              const   Text("CODIGO:MAT II"),
+                const SizedBox(width: 15),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.green[100],
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(5),
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
+                      bottomRight:Radius.circular(5),
+                      topLeft:Radius.circular(5),
                       topRight: Radius.circular(5),
                     ),
                   ),
                   child: IconButton(
-                    icon: Icon(Icons.refresh),
+                    icon: const Icon(Icons.refresh),
                     onPressed: () {},
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: const [
                 //SizedBox(width: 2),
                 Text("TEMA:"),
                 SizedBox(width: 15),
@@ -69,7 +69,7 @@ disciplinaWidget(context) {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: const [
                 SizedBox(width: 2),
                 Text("NIVEL:II"),
                 SizedBox(width: 25),

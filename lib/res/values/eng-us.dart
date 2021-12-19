@@ -1,3 +1,0 @@
-class EngUs {
-  static eng() {}
-}

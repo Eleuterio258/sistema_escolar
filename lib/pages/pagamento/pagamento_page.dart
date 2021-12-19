@@ -7,17 +7,19 @@ import 'package:sistema_escolar/res/colors/app_colors.dart';
 import 'package:sistema_escolar/shared/model/pagamento_model.dart';
 
 class PagamentoPage extends StatefulWidget {
+  const PagamentoPage({Key? key}) : super(key: key);
+
   @override
   _PagamentoPageState createState() => _PagamentoPageState();
 }
 
 class _PagamentoPageState extends State<PagamentoPage> {
-  PagamentoBloc pagamentoBloc;
+  late final PagamentoBloc? pagamentoBloc;
 
   @override
   void initState() {
     pagamentoBloc = BlocProvider.of<PagamentoBloc>(context);
-    pagamentoBloc.add(FetchPagamentoEvent());
+    pagamentoBloc!.add(FetchPagamentoEvent());
     super.initState();
   }
 
@@ -28,25 +30,20 @@ class _PagamentoPageState extends State<PagamentoPage> {
         elevation: 0,
         backgroundColor: AppColors.green,
         centerTitle: true,
-        title: Text("Pagamento"),
+        title: const Text("Pagamento"),
         //leading: Icon(Icons.arrow_back),
         actions: [
           IconButton(
-            icon: Icon(Icons.message),
+            icon: const Icon(Icons.message),
             onPressed: () {
               Navigator.of(context);
             },
           ),
-          IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                
-              }),
         ],
       ),
       body: Column(
         children: [
-          MiniProfileComponts(),
+          const MiniProfileComponts(),
           BlocBuilder<PagamentoBloc, PagamentoState>(
             builder: (context, state) {
               if (state is PagamentoInitialStste) {
@@ -71,7 +68,7 @@ class _PagamentoPageState extends State<PagamentoPage> {
   }
 
   Widget buildLoading() {
-    return Center(child: CircularProgressIndicator());
+    return const Center(child: CircularProgressIndicator());
   }
 
   Widget buildError(String message) {
@@ -81,14 +78,14 @@ class _PagamentoPageState extends State<PagamentoPage> {
   }
 
   Widget buildList(List<Pagamento> pagamentos) {
-    return Container(
+    return SizedBox(
       height: 400,
       child: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, int i) {
           return Column(
             children: [
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Card(
                 shadowColor: AppColors.green,
                 child: InkWell(
@@ -101,9 +98,9 @@ class _PagamentoPageState extends State<PagamentoPage> {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(width: 10),
-                        Icon(Icons.accessible),
-                        SizedBox(width: 35),
+                        const SizedBox(width: 10),
+                        const Icon(Icons.accessible),
+                        const SizedBox(width: 35),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,14 +110,14 @@ class _PagamentoPageState extends State<PagamentoPage> {
                                 "Parcela:10 - ${pagamentos[i].mes}  ${pagamentos[i].ano}"),
                             Row(
                               children: [
-                                Text("Situacao: "),
-                                Text("${pagamentos[i].status}",
+                                const Text("Situacao: "),
+                                Text(pagamentos[i].status!,
                                     style: TextStyle(color: AppColors.green))
                               ],
                             ),
                             Row(
                               children: [
-                                Text("Multa:"),
+                                const Text("Multa:"),
                                 Text("00,00 Mts",
                                     style: TextStyle(color: AppColors.green)),
                               ],
@@ -139,4 +136,3 @@ class _PagamentoPageState extends State<PagamentoPage> {
     );
   }
 }
-

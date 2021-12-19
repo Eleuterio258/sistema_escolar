@@ -6,16 +6,16 @@ class FormFieldComponents extends StatelessWidget {
   final bool senha;
   final TextInputType teclado;
   final TextEditingController controller;
-  final FormFieldValidator<String> validator;
+  final FormFieldValidator<String>? validator;
 
   const FormFieldComponents(
-      {Key key,
-      this.label,
-      this.hint,
-      this.senha,
-      this.teclado,
-      this.controller,
-      this.validator})
+      {Key? key,
+     required this.label,
+     required this.hint,
+    required  this.senha,
+     required this.teclado,
+     required this.controller,
+   this.validator})
       : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class FormFieldComponents extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hint,
         labelText: label,
-        border: OutlineInputBorder(),
+        border:const OutlineInputBorder(),
       ),
       keyboardType: teclado,
       controller: controller,

@@ -3,6 +3,8 @@ import 'package:sistema_escolar/components/mini_profile_componts.dart';
 import 'package:sistema_escolar/res/colors/app_colors.dart';
 
 class DetalhePagamentoPage extends StatefulWidget {
+  const DetalhePagamentoPage({Key? key}) : super(key: key);
+
   @override
   _DetalhePagamentoPageState createState() => _DetalhePagamentoPageState();
 }
@@ -15,19 +17,19 @@ class _DetalhePagamentoPageState extends State<DetalhePagamentoPage> {
         elevation: 0,
         backgroundColor: AppColors.green,
         centerTitle: true,
-        title: Text("Pagamento"),
+        title:  const Text("Pagamento"),
         // leading: Icon(Icons.arrow_back),
         actions: [
           IconButton(
-            icon: Icon(Icons.message),
+            icon: const Icon(Icons.message),
             onPressed: () {},
           ),
         ],
       ),
       body: Column(
         children: [
-          MiniProfileComponts(),
-          SizedBox(
+          const MiniProfileComponts(),
+          const SizedBox(
             height: 15,
           ),
           Card(
@@ -37,22 +39,22 @@ class _DetalhePagamentoPageState extends State<DetalhePagamentoPage> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Icon(Icons.accessible),
-                  SizedBox(
+                  const Icon(Icons.accessible),
+                  const SizedBox(
                     width: 35,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Valor:3.700,00 Mts"),
-                      Text("Parcela:10 - Abril de 2018"),
+                       const Text("Valor:3.700,00 Mts"),
+                       const Text("Parcela:10 - Abril de 2018"),
                       Row(
                         children: [
-                          Text("Situacao: "),
+                           const Text("Situacao: "),
                           Text(
                             "Paga",
                             style: TextStyle(color: AppColors.green),
@@ -61,7 +63,7 @@ class _DetalhePagamentoPageState extends State<DetalhePagamentoPage> {
                       ),
                       Row(
                         children: [
-                          Text("Multa:"),
+                           const Text("Multa:"),
                           Text(
                             "00,00 Mts",
                             style: TextStyle(color: AppColors.green),
@@ -76,30 +78,30 @@ class _DetalhePagamentoPageState extends State<DetalhePagamentoPage> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.height,
-              child: RaisedButton(
-                color: AppColors.green,
+              child: ElevatedButton(
+               // color: AppColors.green,
                 onPressed: () {
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Text(
+                      title: const Text(
                         "Confirmação",
                       ),
                       content: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text("Tens certeza da operação?"),
+                        children: const [
+                           Text("Tens certeza da operação?"),
                         ],
                       ),
                       actions: [
-                        FlatButton(
-                          child: Text("Pagar"),
+                        TextButton(
+                          child:  const Text("Pagar"),
                           onPressed: () {},
                         ),
-                        FlatButton(
-                          child: Text("Cancelar"),
+                        TextButton(
+                          child:  const Text("Cancelar"),
                           onPressed: () {
                             Navigator.pop(context);
                           },
@@ -108,7 +110,7 @@ class _DetalhePagamentoPageState extends State<DetalhePagamentoPage> {
                     ),
                   );
                 },
-                child: Text(
+                child: const Text(
                   "Pagar",
                   style: TextStyle(
                     fontSize: 22,

@@ -5,14 +5,14 @@ alert(BuildContext context, String msg) {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("ok"),
+          title: const Text("ok"),
           content: Text(msg),
           actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text("ok"),
+              child: const Text("ok"),
             )
           ],
         );

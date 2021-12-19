@@ -3,6 +3,8 @@ import 'package:sistema_escolar/res/colors/app_colors.dart';
 import 'package:sistema_escolar/res/image/link_image.dart';
 
 class PerfilPage extends StatefulWidget {
+  const PerfilPage({Key? key}) : super(key: key);
+
   @override
   _PerfilPageState createState() => _PerfilPageState();
 }
@@ -18,15 +20,15 @@ class _PerfilPageState extends State<PerfilPage> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
             ),
           ),
         ],
-        title: Text('Perfil'),
+        title:  const Text('Perfil'),
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon:const Icon(
             Icons.arrow_back,
           ),
         ),
@@ -39,7 +41,7 @@ class _PerfilPageState extends State<PerfilPage> {
             height: MediaQuery.of(context).size.height / 2,
             decoration: BoxDecoration(
               color: AppColors.green,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(25),
                 bottomRight: Radius.circular(25),
               ),
@@ -49,18 +51,18 @@ class _PerfilPageState extends State<PerfilPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                      Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
-                        children: [
-                          Text(
+                        children: const [
+                        Text(
                             "Tollow",
                             style: TextStyle(
                               fontSize: 18,
                               color: Colors.white,
                             ),
                           ),
-                          Text("5423"),
+                           Text("5423"),
                         ],
                       ),
                     ),
@@ -71,10 +73,10 @@ class _PerfilPageState extends State<PerfilPage> {
                         LinkImage.messi,
                       ),
                     ),
-                    Padding(
+                  Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
-                        children: [
+                        children: const [
                           Text(
                             "Followers",
                             style: TextStyle(
@@ -82,21 +84,21 @@ class _PerfilPageState extends State<PerfilPage> {
                               color: Colors.white,
                             ),
                           ),
-                          Text("26433"),
+                           Text("26433"),
                         ],
                       ),
                     ),
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0, bottom: 10),
+              const Padding(
+                  padding: EdgeInsets.only(top: 8.0, bottom: 10),
                   child: Text(
                     "ID:20194532",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0, bottom: 20),
+              const Padding(
+                  padding: EdgeInsets.only(top: 8.0, bottom: 20),
                   child: Text(
                     "Eleuterio Notico",
                     style: TextStyle(
@@ -105,7 +107,7 @@ class _PerfilPageState extends State<PerfilPage> {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                Padding(
+              Padding(
                   padding: const EdgeInsets.only(left: 16, right: 16),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -114,12 +116,12 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.search,
                               color: Colors.white,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Friends",
                             style: TextStyle(color: Colors.white),
                           )
@@ -129,12 +131,12 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.child_friendly,
                               color: Colors.white,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Friends",
                             style: TextStyle(color: Colors.white),
                           )
@@ -144,12 +146,12 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.video_call,
                               color: Colors.white,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Friends",
                             style: TextStyle(color: Colors.white),
                           )
@@ -159,12 +161,12 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.favorite,
                               color: Colors.white,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "Friends",
                             style: TextStyle(color: Colors.white),
                           )

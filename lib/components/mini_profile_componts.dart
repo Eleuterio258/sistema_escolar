@@ -3,7 +3,7 @@ import 'package:sistema_escolar/res/colors/app_colors.dart';
 
 class MiniProfileComponts extends StatelessWidget {
   const MiniProfileComponts({
-    Key key,
+    Key ? key,
   }) : super(key: key);
 
   @override
@@ -12,7 +12,7 @@ class MiniProfileComponts extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 8,
       decoration: BoxDecoration(
         color: AppColors.green,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
         ),
@@ -21,7 +21,7 @@ class MiniProfileComponts extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             child: Text(
               "E",
               style: TextStyle(
@@ -34,9 +34,9 @@ class MiniProfileComponts extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("IMPFA2015547",
+              const Text("IMPFA2015547",
                   style: TextStyle(fontSize: 20, color: Colors.white)),
-              Text("Eleuterio Fulaho Notico",
+              const Text("Eleuterio Fulaho Notico",
                   style: TextStyle(color: Colors.white)),
               Text("Curso:PFA 2012", style: TextStyle(color: Colors.brown[50])),
             ],

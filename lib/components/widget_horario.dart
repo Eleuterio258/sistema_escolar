@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class WidgetHorario extends StatelessWidget {
   const WidgetHorario({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height / 2,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color.fromRGBO(192, 190, 192, 1),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
@@ -21,7 +21,7 @@ class WidgetHorario extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [],
+        children: const [],
       ),
     );
   }

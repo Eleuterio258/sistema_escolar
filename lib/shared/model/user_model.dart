@@ -11,13 +11,13 @@ String userToJson(User data) => json.encode(data.toJson());
 class User {
   User({
     this.id,
-    this.name,
-    this.email,
-    this.createdAt,
-    this.updatedAt,
+    required this.name,
+    required  this.email,
+    required this.createdAt,
+  required  this.updatedAt,
   });
 
-  int id;
+  int? id;
   String name;
   String email;
   DateTime createdAt;

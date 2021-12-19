@@ -3,26 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:sistema_escolar/components/disciplina_widget.dart';
 import 'package:http/http.dart' as http;
 import 'package:sistema_escolar/res/colors/app_colors.dart';
-import 'package:sistema_escolar/shared/model/User_model.dart';
+import 'package:sistema_escolar/shared/model/user_model.dart';
 import 'package:sistema_escolar/utils/rotas_util.dart';
 
 class FaltaPage extends StatefulWidget {
+  const FaltaPage({Key? key}) : super(key: key);
+
   @override
   _FaltaPageState createState() => _FaltaPageState();
 }
 
 class _FaltaPageState extends State<FaltaPage> {
-  bool status = false;
+ late bool status = false;
   final url = "http://192.168.137.1/siga_api/allUser";
-  List<User> _users = List<User>();
+  final List<User> _users = <User>[];
   Future<List<User>> usersTotal() async {
-    var result = await http.get(url);
-    var pagamento = List<User>();
+    var result = await http.get(Uri.parse(url));
+    var pagamento = <User>[];
 
     if (result.statusCode == 200) {
       var jsonD = json.decode(result.body);
       for (var jsonOut in jsonD) {
-      //  pagamento.add(UsuarioModel.fromJson(jsonOut));
+      pagamento.add(User.fromJson(jsonOut));
       }
     }
     return pagamento;
@@ -45,9 +47,9 @@ class _FaltaPageState extends State<FaltaPage> {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: AppColors.green,
-          title: Text('Faltas'),
+          title: const Text('Faltas'),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               nevegarTela(context, 'dashboard');
             },
@@ -84,7 +86,7 @@ class _FaltaPageState extends State<FaltaPage> {
                             },
                           );
                         } else {
-                          return Center(child: Text("carregando Dados"));
+                          return const Center(child: Text("carregando Dados"));
                         }
                       }),
                 ),

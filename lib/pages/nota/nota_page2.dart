@@ -4,6 +4,8 @@ import 'package:sistema_escolar/res/colors/app_colors.dart';
 import 'package:sistema_escolar/utils/rotas_util.dart';
 
 class NotaPage extends StatefulWidget {
+  const NotaPage({Key? key}) : super(key: key);
+
   @override
   _NotaPageState createState() => _NotaPageState();
 }
@@ -17,21 +19,21 @@ class _NotaPageState extends State<NotaPage> {
         backgroundColor: AppColors.green,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon:const Icon(Icons.arrow_back),
           onPressed: () {
             nevegarTela(context, 'dashboard');
           },
         ),
-        title: Text('Notas'),
-        actions: [
-          Icon(
+        title:  const Text('Notas'),
+        actions: const [
+         Icon(
             Icons.notifications,
             color: Colors.white,
           ),
           SizedBox(
             width: 10,
           ),
-          Icon(
+         Icon(
             Icons.vpn_key,
             color: Colors.white,
           ),
@@ -42,8 +44,8 @@ class _NotaPageState extends State<NotaPage> {
       ),
       body: Column(
         children: [
-          MiniProfileComponts(),
-          SizedBox(
+          const MiniProfileComponts(),
+           SizedBox(
             height: 400,
             child: SingleChildScrollView(
               child: Column(
@@ -53,7 +55,7 @@ class _NotaPageState extends State<NotaPage> {
                   Card(
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           "FISICA",
                           style: TextStyle(
                             fontSize: 19,
@@ -69,25 +71,25 @@ class _NotaPageState extends State<NotaPage> {
                                   width: 150,
                                   height: 20,
                                   color: Colors.brown[100],
-                                  child: Text("Avaliação")),
-                              SizedBox(width: 5),
+                                  child:  const Text("Avaliação")),
+                              const SizedBox(width: 5),
                               Container(
                                   alignment: Alignment.center,
                                   width: 45,
                                   height: 20,
                                   color: Colors.brown[100],
-                                  child: Text("Nota")),
-                              SizedBox(width: 5),
+                                  child:  const Text("Nota")),
+                              const SizedBox(width: 5),
                               Container(
                                   alignment: Alignment.center,
                                   width: 45,
                                   height: 20,
                                   color: Colors.brown[100],
-                                  child: Text("Faltas")),
+                                  child:  const Text("Faltas")),
                             ],
                           ),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Padding(
                           padding: const EdgeInsets.only(left: 5, right: 5),
                           child: Row(
@@ -97,21 +99,21 @@ class _NotaPageState extends State<NotaPage> {
                                   width: 150,
                                   height: 20,
                                   color: Colors.brown[50],
-                                  child: Text("1º semestre")),
-                              SizedBox(width: 5),
+                                  child:  const Text("1º semestre")),
+                              const SizedBox(width: 5),
                               Container(
                                   alignment: Alignment.center,
                                   width: 45,
                                   height: 20,
                                   color: Colors.brown[50],
-                                  child: Text("12")),
-                              SizedBox(width: 5),
+                                  child:  const Text("12")),
+                              const SizedBox(width: 5),
                               Container(
                                   alignment: Alignment.center,
                                   width: 45,
                                   height: 20,
                                   color: Colors.brown[50],
-                                  child: Text("1")),
+                                  child:  const Text("1")),
                             ],
                           ),
                         ),
@@ -123,17 +125,17 @@ class _NotaPageState extends State<NotaPage> {
                                 alignment: Alignment.center,
                                 width: 150,
                                 height: 20,
-                                child: Text("Aprovado"),
+                                child:  const Text("Aprovado"),
                                 color: Colors.brown[50],
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                             ],
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                 ],
               ),
             ),
